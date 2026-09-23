@@ -121,36 +121,44 @@ The trained model is saved as:
 
 ```text
 KNN_heart_project.pkl
+```
+
 The preprocessing objects are also saved for consistent prediction:
 
+```text
 scaler.pkl
 columns.pkl
+```
 
 This allows the deployed application to use the same preprocessing pipeline that was used during model development.
 
-🌐 Streamlit Web Application
+---
+
+## 🌐 Streamlit Web Application
 
 The Machine Learning model was integrated into an interactive Streamlit application.
 
-User Inputs
+### User Inputs
 
 The application accepts clinical parameters such as:
 
-Age
-Sex
-Resting Blood Pressure
-Cholesterol
-Fasting Blood Sugar
-Chest Pain Type
-Resting ECG
-Maximum Heart Rate
-Exercise-Induced Angina
-Oldpeak
-ST Slope
+- Age
+- Sex
+- Resting Blood Pressure
+- Cholesterol
+- Fasting Blood Sugar
+- Chest Pain Type
+- Resting ECG
+- Maximum Heart Rate
+- Exercise-Induced Angina
+- Oldpeak
+- ST Slope
 
 The application processes the input, applies the saved preprocessing pipeline, and passes the transformed data to the trained KNN model.
 
-Prediction Flow
+### Prediction Flow
+
+```text
 User Input
     ↓
 Create Input DataFrame
@@ -164,36 +172,50 @@ KNN Model
 Prediction
     ↓
 Streamlit Result
+```
 
+---
 
-🎨 Application Preview
+## 🎨 Application Preview
+
 The application provides a clean dashboard-style interface with:
 
-Patient input controls
-Clinical parameter sections
-KNN model information
-Prediction button
-Prediction result display
+- Patient input controls
+- Clinical parameter sections
+- KNN model information
+- Prediction button
+- Prediction result display
 
-🧰 Tech Stack
-Programming Language
-Python
-Data Analysis & Visualization
-Pandas
-NumPy
-Matplotlib
-Seaborn
-Machine Learning
-Scikit-Learn
-K-Nearest Neighbors
-StandardScaler
-Model Persistence
-Joblib
-Frontend / Deployment
-Streamlit
-Streamlit Community Cloud
+---
 
-📁 Project Structure
+## 🧰 Tech Stack
+
+**Programming Language**
+- Python
+
+**Data Analysis & Visualization**
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+
+**Machine Learning**
+- Scikit-Learn
+- K-Nearest Neighbors
+- StandardScaler
+
+**Model Persistence**
+- Joblib
+
+**Frontend / Deployment**
+- Streamlit
+- Streamlit Community Cloud
+
+---
+
+## 📁 Project Structure
+
+```text
 heart-disease-prediction/
 │
 ├── app.py
@@ -204,57 +226,88 @@ heart-disease-prediction/
 ├── columns.pkl
 ├── requirements.txt
 └── README.md
+```
 
-🚀 Run Locally
-1. Clone the repository
+---
+
+## 🚀 Run Locally
+
+**1. Clone the repository**
+
+```bash
 git clone <YOUR_GITHUB_REPOSITORY_URL>
-2. Navigate to the project directory
+```
+
+**2. Navigate to the project directory**
+
+```bash
 cd heart-disease-prediction
-3. Install dependencies
+```
+
+**3. Install dependencies**
+
+```bash
 pip install -r requirements.txt
-4. Run the Streamlit application
+```
+
+**4. Run the Streamlit application**
+
+```bash
 streamlit run app.py
+```
 
 The application will open in your browser.
 
-📦 Requirements
+---
+
+## 📦 Requirements
+
 The project uses the following Python libraries:
+
+```text
 streamlit
 pandas
 scikit-learn
 joblib
 numpy
+```
 
+---
 
-💡 Key Insights from EDA
+## 💡 Key Insights from EDA
 
 Some notable observations from the exploratory analysis include:
 
-The dataset has a relatively balanced distribution of the target variable.
-Several records contained 0 values for medical measurements such as cholesterol.
-Features such as Exercise Angina, Oldpeak, and ST Slope showed notable relationships with the target variable.
-Maximum heart rate and ST Slope also showed inverse relationships with the presence of heart disease.
+- The dataset has a relatively balanced distribution of the target variable.
+- Several records contained `0` values for medical measurements such as cholesterol.
+- Features such as Exercise Angina, Oldpeak, and ST Slope showed notable relationships with the target variable.
+- Maximum heart rate and ST Slope also showed inverse relationships with the presence of heart disease.
 
+---
 
-🔮 Future Improvements
+## 🔮 Future Improvements
 
 Potential improvements for future versions:
 
-Compare multiple classification algorithms
-Perform hyperparameter tuning
-Add model evaluation metrics to the dashboard
-Add probability/confidence visualization
-Improve input validation
-Add interactive EDA visualizations to the Streamlit application
-Improve UI/UX and responsive design
-Add model explainability using techniques such as SHAP
+- Compare multiple classification algorithms
+- Perform hyperparameter tuning
+- Add model evaluation metrics to the dashboard
+- Add probability/confidence visualization
+- Improve input validation
+- Add interactive EDA visualizations to the Streamlit application
+- Improve UI/UX and responsive design
+- Add model explainability using techniques such as SHAP
 
-👨‍💻 Author
-Rahul
+---
+
+## 👨‍💻 Author
+
+**Rahul**
 
 Built as a Machine Learning and Data Analytics project to explore the complete journey from raw data analysis to a deployed ML application.
 
-⭐ Support
+---
+
+## ⭐ Support
 
 If you found this project interesting, consider giving the repository a ⭐ on GitHub.
-
